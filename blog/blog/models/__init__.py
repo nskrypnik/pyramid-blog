@@ -12,6 +12,7 @@ from blog.models.tag import Tag
 from blog.models.snippet import Snippet
 
 def populate():
+    return
     session = Session()
     user = User(u'Renatopp', u'renato.ppontes@gmail.com')
     user.password = hashlib.md5(u'123456'+g.SALT).hexdigest()

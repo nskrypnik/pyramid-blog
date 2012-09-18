@@ -60,9 +60,9 @@ class Grid(FAGrid):
     def _operations_col(self, obj, route_name):
         route_name = route_name+'_action'
         result = '<span class="operations">'
-        result += '<a href="%s">Editar</a>' % g.url(route_name, action='update', params=[obj.id])
+        result += '<a href="%s">Edit</a>' % g.url(route_name, action='update', params=[obj.id])
         result += '&nbsp;'
-        result += '<a href="%s" onclick="return confirm(\'Are you sure you want to delete?\')">Remover</a>' % g.url(route_name, action='delete', params=[obj.id])
+        result += '<a href="%s" onclick="return confirm(\'Are you sure you want to delete?\')">Delete</a>' % g.url(route_name, action='delete', params=[obj.id])
         result += '</span>'
         return result
 

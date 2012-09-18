@@ -67,10 +67,10 @@ class CrudHandler(BaseHandler):
                 form.sync()
                 self.model._before_create(form, self.request.params)
                 Session.add(form.model)
-                self.request.session.flash(u'Item incluído com sucesso.', 'success')
+                self.request.session.flash(u'Item successfully added.', 'success')
                 return HTTPFound(location=g.url(self.url_base))
             else:
-                self.request.session.flash(u'Dados inválidos.', 'error')
+                self.request.session.flash(u'Invalid data.', 'error')
 
         return dict(form=form, url_base=self.url_base)
 
@@ -84,17 +84,17 @@ class CrudHandler(BaseHandler):
                 form.sync()
                 self.model._before_update(item, form, self.request.params)
                 Session.add(form.model)
-                self.request.session.flash(u'Item atualizado com sucesso.', 'success')
+                self.request.session.flash(u'Item successfully updated.', 'success')
                 return HTTPFound(location=g.url(self.url_base))
             else:
-                self.request.session.flash(u'Dados inválidos', 'error')
+                self.request.session.flash(u'Invalid data', 'error')
 
         return dict(form=form, url_base=self.url_base)
 
     def _do_delete(self):
         item = Session.query(self.model).get(self.get_id())
         Session.delete(item)
-        self.request.session.flash(u'Item excluído com sucesso.', 'success')
+        self.request.session.flash(u'Item deleted successfully.', 'success')
         return HTTPFound(location=g.url(self.url_base))
 
 

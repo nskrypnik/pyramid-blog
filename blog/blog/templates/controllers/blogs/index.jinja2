@@ -23,7 +23,7 @@
     <div class="blog-postcontent">
         {{rest(post.content, True)|safe}}
         <br>
-        <div style="text-align:center">{{h.link_to('(ler mais...)', 'blog_entry'|route_url(id=post.id, alias=post.alias))}}</div>
+        <div style="text-align:center">{{h.link_to('(more...)', 'blog_entry'|route_url(id=post.id, alias=post.alias))}}</div>
     </div>
 </div>
 {%- endmacro %}
@@ -47,7 +47,7 @@
             <div class="span6">
                 <div style="padding:5px">
                     {% if post.allow_comment %}
-                        {{h.link_to('Comentar', 'blog_entry'|route_url(id=post.id, alias=post.alias), class_='btn')}}
+                        {{h.link_to('Comment', 'blog_entry'|route_url(id=post.id, alias=post.alias), class_='btn')}}
                     {% endif %}
                 </div>
             </div>

@@ -7,7 +7,7 @@
     background: #fff;
     border: 1px solid #aaa;
     /*padding:5px;*/
-    margin-bottom:5px;
+    margin-bottom:10px;
 }
 #blog-sidebar .box h2,
 #blog-sidebar .box h3 {
@@ -29,6 +29,11 @@
     /*padding: 5px;*/
     text-align:justify;
 }
+
+#blog-content #disqus_thread {
+    padding: 10px;
+}
+
 .blog-postcontent h1 a,
 .blog-postcontent h2 a 
 .blog-postcontent h3 a 

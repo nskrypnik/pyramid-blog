@@ -13,7 +13,7 @@ class User(Base, BaseModel):
     nickname = Column(Unicode, nullable=False, label=u'Nick')
     realname = Column(Unicode, nullable=False, label=u'Nome Real')
     email = Column(Unicode, nullable=False, unique=True, label=u'Email')
-    password = Column(Unicode, nullable=False, label=u'Senha')
+    password = Column(Unicode, nullable=False, label=u'Password')
     url = Column(Unicode, label=u'Website')
 
     posts = relationship('Post', backref='user')
