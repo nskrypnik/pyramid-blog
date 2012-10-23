@@ -32,9 +32,10 @@
 <div class="span12 blog-postbody-summary">
     <div class="blog-postcontent">
         {% if post.summary %}
-            {{rest(post.summary)|safe}} {{h.link_to('(ler mais...)', 'blog_entry'|route_url(id=post.id, alias=post.alias))}}
+            {{rest(post.summary)|safe}} {{h.link_to('(more...)', 'blog_entry'|route_url(id=post.id, alias=post.alias))}}
         {% else %}
-            <p>Essa postagem não possui descrição</p>
+            {#<p>{{rest(post.content[:250])|safe}}... <br />{{h.link_to('(more...)', 'blog_entry'|route_url(id=post.id, alias=post.alias))}}</p>#}
+            This post has no description. {{h.link_to('(Look inside)', 'blog_entry'|route_url(id=post.id, alias=post.alias))}}
         {% endif %}
     </div>
 </div>

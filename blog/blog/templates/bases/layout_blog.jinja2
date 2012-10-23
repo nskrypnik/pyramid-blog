@@ -28,21 +28,19 @@
     </script>
 
     {% if request.server_port != 6543 and 'user_id' not in request.session and request.path != '/users/login' %}
-    <script type="text/javascript">
+        <script type="text/javascript">
 
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-22933200-1']);
-        _gaq.push(['_setDomainName', 'none']);
-        _gaq.push(['_setAllowLinker', true]);
-        _gaq.push(['_trackPageview']);
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-35799591-1']);
+          _gaq.push(['_trackPageview']);
 
-        (function() {
+          (function() {
             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
             ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
+          })();
 
-    </script>
+        </script>
     {% endif %}
 </head>
 

@@ -23,8 +23,8 @@ patterns = (r'<span class="([\w|\s|_]*)">([\w|\s|&|;\.]*)</span>', literal(r'<li
 def paginate(page, **attrs):
     p = page.pager('$link_previous ~2~ $link_next',
         symbol_first=u'First',
-        symbol_previous=u'Anterior',
-        symbol_next=u'Próxima',
+        symbol_previous=u'Previous',
+        symbol_next=u'Next',
         symbol_last=u'Last',
         show_if_single_page=False,
         link_attr={'class':None},

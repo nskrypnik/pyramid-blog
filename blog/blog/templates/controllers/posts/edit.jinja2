@@ -5,9 +5,9 @@
     {{form.render()|safe}}
 
     <div class="actions">
-        {{h.submit('submit', 'Salvar Rascunho', class_='btn')}}
-        {{h.submit('submit', 'Publicar', class_='btn success')}}
-        <input type="button" value="Cancelar" class="btn danger" onclick="window.location='{{url_base|route_url}}'">
+        {{h.submit('submit', 'Save Draft', class_='btn')}}
+        {{h.submit('submit', 'Publish', class_='btn success')}}
+        <input type="button" value="Cancel" class="btn danger" onclick="window.location='{{url_base|route_url}}'">
     </div>
 {{h.end_form()}}
 

@@ -13,16 +13,16 @@ class Post(Base, BaseModel):
     __tablename__ = 'post'
 
     id = Column(Integer, primary_key=True)
-    title = Column(Unicode, nullable=False, unique=True, label=u'Título')
+    title = Column(Unicode, nullable=False, unique=True, label=u'Title')
     alias = Column(Unicode, nullable=False, unique=True, label=u'Alias')
-    summary = Column(UnicodeText, label=u'Descrição da Postagem')
+    summary = Column(UnicodeText, label=u'Summary')
     content = Column(UnicodeText, nullable=False, label=u'')
-    date = Column(DateTime, nullable=False, label=u'Data de Criação')
+    date = Column(DateTime, nullable=False, label=u'Creation Date')
     modified = Column(DateTime, label=u'Data de Modificação')
     status = Column(Unicode, nullable=False, label=u'Status')
     type = Column(Unicode, nullable=False, label=u'Tipo da Postagem')
-    order = Column(Integer, label=u'Ordem')
-    allow_comment = Column(Boolean, nullable=False, label=u'Permitir Comentários')
+    order = Column(Integer, label=u'Order')
+    allow_comment = Column(Boolean, nullable=False, label=u'Allow Comments')
     
     parent_id = Column(Integer, ForeignKey('post.id'))
     parent = relation('Post', remote_side=[id], backref='children')
